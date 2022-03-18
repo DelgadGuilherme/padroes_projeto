@@ -48,7 +48,7 @@ public class Sessao implements Cloneable {
     @Override
     public Sessao clone() throws CloneNotSupportedException {
         Sessao sessaoClone = (Sessao) super.clone();
-        sessaoClone.sala = (String) sessaoClone.sala.clone();
+       //sessaoClone.sala = (String) sessaoClone.sala.clone();
         return sessaoClone;
     }
 
