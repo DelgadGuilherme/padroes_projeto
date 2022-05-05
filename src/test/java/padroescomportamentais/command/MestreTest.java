@@ -19,7 +19,7 @@ class MestreTest {
     @Test
     void deveAbrirQuadro() {
         Quest aberturaQuadro = new AberturaQuadroQuest(quadro);
-        mestre.iniciarQuest(aberturaQuadro);
+        mestre.executarQuest(aberturaQuadro);
 
         assertEquals("Quadro de quests aberto", quadro.getSituacao());
     }
@@ -27,7 +27,7 @@ class MestreTest {
     @Test
     void deveFecharQuadro() {
         Quest fecharQuadro = new FecharQuadroQuest(quadro);
-        mestre.iniciarQuest(fecharQuadro);
+        mestre.executarQuest(fecharQuadro);
 
         assertEquals("Quadro de quests fechado", quadro.getSituacao());
     }
@@ -37,8 +37,8 @@ class MestreTest {
         Quest aberturaQuadro = new AberturaQuadroQuest(quadro);
         Quest fecharQuadro = new FecharQuadroQuest(quadro);
 
-        mestre.iniciarQuest(aberturaQuadro);
-        mestre.iniciarQuest(fecharQuadro);
+        mestre.executarQuest(aberturaQuadro);
+        mestre.executarQuest(fecharQuadro);
 
         mestre.cancelarUltimaQuest();
 

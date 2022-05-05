@@ -7,7 +7,7 @@ public class Mestre {
 
     private List<Quest> quests = new ArrayList<>();
 
-    public void iniciarQuest(Quest quest) {
+    public void executarQuest(Quest quest) {
         this.quests.add(quest);
         quest.executar();
     }
